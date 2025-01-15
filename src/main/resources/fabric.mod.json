@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "nosleepmod",
+  "version": "${version}",
+  "name": "NoSleepMod",
+  "description": "A Mod That Disables Sleeping",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/nosleepmod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "net.zaiden.nosleepmod.client.NosleepmodClient"
+    ],
+    "main": [
+      "net.zaiden.nosleepmod.Nosleepmod"
+    ]
+  },
+  "mixins": [
+    "nosleepmod.mixins.json",
+    {
+      "config": "nosleepmod.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
